@@ -1,0 +1,16 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+- pipeline.id: nginx
+  path.config: "/etc/logstash/conf.d/nginx.conf"
+- pipeline.id: application
+  path.config: "/etc/logstash/conf.d/application.conf"
+- pipeline.id: syslog
+  path.config: "/etc/logstash/conf.d/syslog.conf"
+- pipeline.id: mysql
+  path.config: "/etc/logstash/conf.d/mysql.conf"
+- pipeline.id: catalina
+  path.config: "/etc/logstash/conf.d/catalina.conf"
+- pipeline.id: hikari
+  path.config: "/etc/logstash/conf.d/hikari.conf"
